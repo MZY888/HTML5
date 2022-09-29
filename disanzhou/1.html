@@ -2,9 +2,170 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>2</title>
+		<title></title>
+		<style type="text/css">
+			.main{
+				width:404px;
+				height:374px;
+				border:1px solid blue;
+			}
+			.main #heard{
+				width: 404px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				color: red;
+				font-size: 15px;
+				font-family: 宋体;
+			}
+			.main #lmain{
+				width: 404px;
+				height: 398px;
+			}
+			.main #lmain #line{
+				width: 402px;
+				height: 26px;
+				border: 1px solid white;
+			}
+			.main #lmain #line5{
+				width: 402px;
+				height: 100px;
+				border: 1px solid white;
+			}
+			.main #lmain #line .lline{
+				width: 100px;
+				height: 26px;
+				font-family: 宋体;
+				font-size: 10px;
+				text-align: right;
+				line-height: 26px;
+				background-color: lightgray;
+				float: left;
+			}
+			.main #lmain #line5 .lline{
+				width: 100px;
+				height: 100px;
+				font-family: 宋体;
+				font-size: 10px;
+				text-align: right;
+				background-color: lightgray;
+				float: left;
+			}
+			.main #lmain #line .rline{
+				width: 301px;
+				height: 26px;
+				font-family: 宋体;
+				font-size: 10px;
+				background-color: lightgray;
+				float: right;
+			}
+			.main #lmain #line5 .rline{
+				width: 301px;
+				height: 100px;
+				font-family: 宋体;
+				font-size: 10px;
+				background-color: lightgray;
+				float: right;
+			}
+			.text{
+				text-align: center;
+				margin-top: 2px;
+				border-style: inset;
+				border: 5px solid none;
+			}
+			table{
+				text-align: center;
+			}
+			select{
+				font-family: 宋体;
+			}
+			.register,.reset{
+			     width: 50px;
+			     height: 20px;
+			     border-radius: 10px;
+			     cursor: pointer;
+			     font-size: 9px;
+			     font-family: Arial, Helvetica, sans-serif;
+			     background-color: #D7D7D7;
+			 }
+			.register:hover{
+			     background-color: #23c937cd;
+			     color: #fff;
+			 }
+			 .reset:hover{
+			     background-color: #EA3323;
+			     color: #fff;
+			 }
+		</style>
 	</head>
 	<body>
-		<h1 style="font-family:宋体;font-size:12pt;color:blue">在这里使用了H1标记</h1>
+		<div class="main">
+			<div style="background-color: aqua;" id="heard">
+				<b>信息统计表</b>
+			</div>
+			<div id="lmain">
+				<div id="line">
+					<div class="lline"><b>姓名:</b></div>
+					<div class="rline">&nbsp;
+						<input type="text" name="userName" class="text"/>
+					</div>
+				</div>
+				<div id="line">
+					<div class="lline"><b>年龄:</b></div>
+					<div class="rline">&nbsp;
+						<input type="text" name="userAge" class="text"/>
+					</div>
+				</div>
+				<div id="line">
+					<div class="lline"><b>性别:</b></div>
+					<div class="rline"><table><tr><td>&nbsp;
+						<input type="radio" name="userSex" class="sex" value="nan" checked>男
+						<input type="radio" name="userSex" class="sex" value="nv">女</td></tr></table>
+					</div>
+				</div>
+				<div id="line5">
+					<div class="lline"><b>爱好:</b></div>
+					<div class="rline"><table><tr><td>&nbsp;
+						<input type="checkbox" name="userLike" class="like" value="">旅游<br>&nbsp;
+						<input type="checkbox" name="userLike" class="like" value="" >登山<br>&nbsp;
+						<input type="checkbox" name="userLike" class="like" value="" >健身<br>&nbsp;
+						<input type="checkbox" name="userLike" class="like" value="" >游泳<br>&nbsp;
+						<input type="checkbox" name="userLike" class="like" value="" >上网</td></tr></table>
+					</div>
+				</div>
+				<div id="line">
+					<div class="lline"><b>学历:</b></div>
+					<div class="rline"><table><tr><td>&nbsp;
+						<select>
+							<option >---学历---</option>
+							<option >---专科---</option>
+							<option >---本科---</option>
+						</select></td></tr></table>
+					</div>
+				</div>
+				<div id="line5">
+					<div class="lline"><b>自我介绍:</b></div>
+					<div class="rline""><table><tr>
+					<td colspan="5" style="text-align:left;">&nbsp;
+						<textarea cols="20" rows="5" style="overflow-y:scroll;">
+						</textarea>
+					</td></tr></table>
+					</div>
+				</div>
+				<div id="line">
+					<div class="lline"></div>
+					<div class="rline">
+						<table>
+							<tr>
+								<td colspan="2">&nbsp;
+									<input type="submit" class="register" value="提交">
+									<input type="reset" class="reset" value="重置">
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
