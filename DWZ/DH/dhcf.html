@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Animation</title>
+		<style>
+			@keyframes myfirst{  
+				0%{background: red; left:0px; top:0px;}         
+				25% {background: yellow; left:100px; top:0px;}         
+				50% {background: green; left:100px; top:100px;}         
+				75% {background: darkmagenta; left:0px; top:100px;}        
+				100% {background: red; left:0px; top:0px;}    
+			}
+			#Animation{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background-color: red;
+				animation: myfirst 8s;
+			}
+			.box{
+				width:50px;
+				height:50px;
+				background-color:dodgerblue;
+				transition:width 2s;
+			}
+			.student{
+				width:50px;
+				height:50px;
+				background-color:orangered;
+				transition:width 2s;
+			}
+			.yc{
+				color: white;
+				display: none;
+				line-height: 50px;
+				text-align: center;
+				margin-left: 10px;
+				position:absolute;
+			}
+			div:hover{
+				width: 150px;
+			}
+			div:hover .yc{
+				display: inline-block;
+				
+			}
+			img{
+				float: right;
+				text-align: center;
+			}
+			p{
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="Animation"></div><p></p>
+		<div class="box" >
+			<span class="yc">访客 visitor</span>
+			<img src="访客.png" height="50px" width="50px"/>
+		</div>
+		<div class="student">
+			<span class="yc">学生 student</span>
+			<img src="学生.png" height="50px" width="50px"/>
+		</div>
+		
+	</body>
+</html>
+
+
