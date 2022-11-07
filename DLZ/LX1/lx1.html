@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			img{
+				width: 10px;
+				height: 10px;
+			}
+			#ed{
+				text-align:justify;
+				text-justify:distribute-all-lines;
+				text-align-last:justify
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table>
+				<tbody>
+					<tr style="font-size: 20px;" align="center">
+					<td colspan="2">用户注册</td>
+					</tr>
+					<tr>
+						<td id="ed">用户名</td>
+						<td>
+							<input type="text" id="user" placeholder="请输入用户名" onblur="userName()">
+						</td>
+						<td id="user-warn"></td>
+					</tr>
+					<tr>
+						<td id="ed">密码</td>
+						<td>
+							<input type="password" id="powo" placeholder="请输入至少6位的密码" onblur="Pow()">
+						</td>
+						<td id="powo-warn"></td>
+					</tr>
+					<tr>
+						<td id="ed">确认密码</td>
+						<td>
+							<input type="password" id="powt" placeholder="请再次密码" onkeyup="PowS()">
+						</td>
+						<td id="pows-warn"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<script>
+			//当用户没有输入账号并且鼠标离开用户名输入框时，提醒用户输入用户名
+			function userName(){
+				//获取用户名
+				var name = document.getElementById('user').value;
+				//判断
+				if(name == null || name == ""){
+					var warnone = document.getElementById('user-warn');
+					warnone.innerHTML="<img src='叉.png'/>";
+				}else{
+					var warnone = document.getElementById('user-warn');
+					warnone.innerHTML="<img src='勾.png'/>";
+				}
+			}
+			//判断密码至少6位
+			function Pow(){
+				//获取输入的第一次的密码
+				var powo = document.getElementById('powo').value;
+				//获取密码提示
+				var warntwo = document.getElementById('powo-warn');
+				if(powo.length < 6 || powo  == ""){
+					warntwo.innerHTML = "<img src='叉.png'/>"
+				}else{
+					warntwo.innerHTML = "<img src='勾.png'/>"
+				}
+			}
+			function PowS(){
+				//获取两次的密码
+				var powo = document.getElementById('powo').value;
+				var powt = document.getElementById('powt').value;
+				//获取提示
+				var warn3 = document.getElementById('pows-warn');
+				//判断
+				if(powo == powt){
+					warn3.innerHTML="<img src='勾.png'/>";
+				}else{
+					warn3.innerHTML="<img src='叉.png'/>";
+				}
+			}
+		</script>
+	</body>
+</html>
